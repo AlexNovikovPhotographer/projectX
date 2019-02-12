@@ -1,0 +1,16 @@
+# coding=utf-8
+import pandas
+import re
+
+import sys
+sys.path.append("..")
+from shad_util import print_answer
+
+
+data = pandas.read_csv('https://d3c33hcgiwev3.cloudfront.net/_ea07570741a3ec966e284208f588e50e_titanic.csv?Expires=1550102400&Signature=R0oRVeX9HIAMf4zL0wpu-vhJcWx3DIdbu5pdV7qq8hzpNgBG59~wAgkZ0tk58g4X1y829ltrCUso46dnmAgcZDYp~rEaHlLPpZJ7Tx~CdJONYg0jfqBaWhu10VJOCyQ4NlA~z8vrQtMWoloGrfxwlOrpLAdOk38JIABSIHD7PPM_&Key-Pair-Id=APKAJLTNE6QMUY6HBC5A', index_col='PassengerId')
+
+
+
+
+sex_counts = data['Sex'].value_counts()
+print_answer(1, '{} {}'.format(sex_counts['male'], sex_counts['female']))
