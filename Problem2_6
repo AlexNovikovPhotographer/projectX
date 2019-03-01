@@ -1,0 +1,13 @@
+import random
+
+
+def problem2_6():
+
+
+    random.seed(431) 
+    for r1 in range(0,100):
+        L1 = (random.randint(1,6))
+        L2 = (random.randint(1,6))
+
+        print(L1+L2)
+
